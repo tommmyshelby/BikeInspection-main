@@ -1,0 +1,27 @@
+.inspection-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+  }
+  .image-area-start-inspection{
+    position: relative;
+    width: 1200px;
+    aspect-ratio: 16/9;
+    height: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: crosshair;
+  }
+  .inspection-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: fit-content;
+    justify-content: space-between;
+  }
+  
