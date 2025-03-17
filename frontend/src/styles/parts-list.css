@@ -1,0 +1,217 @@
+.import-csv-button {
+    padding: 8px 16px;
+    background-color: var(--primary-blue);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    box-shadow: var(--button-shadow);
+    transition: all var(--standard-transition);
+}
+
+.import-csv-button:hover {
+    background-color: var(--dark-blue);
+    box-shadow: var(--button-hover-shadow);
+}
+
+.parts-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: var(--background-gray);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    max-width: 1000px;
+    height: 90vh; /* Take most of the viewport height */
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensures clean layout */
+}
+
+.parts-list-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--nav-dark);
+    text-align: center;
+    align-self: center;
+}
+
+.parts-fixed-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    font-weight: 600;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.parts-list-wrapper {
+    flex: 1; /* Take available space within container */
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow-y: auto; /* Enables scroll if needed */
+    margin-top: 16px;
+    max-height: calc(100% - 100px); /* Reserve space for button and header */
+}
+
+.parts-list-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: start; /* Align items to the top */
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color var(--standard-transition);
+  }
+
+.parts-list-item:last-child {
+    border-bottom: none;
+}
+
+.parts-list-item.dragging {
+    background: linear-gradient(90deg, rgba(70, 130, 220, 0.1), rgba(49, 114, 211, 0.2));
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    
+ }
+
+.parts-list-number {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.parts-list-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 12px;
+    width: 100%;
+  }
+
+.parts-list-drag-handle {
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    transition: transform var(--standard-transition);
+}
+
+.parts-list-drag-handle:hover {
+    transform: scale(1.2);
+}
+
+.parts-list-name,
+.parts-list-checkPoint {
+  width: 100%;
+  margin: 8px 0; /* Add spacing between fields */
+}
+
+.parts-list-name:focus,
+.parts-list-checkPoint:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 6px rgba(58, 141, 222, 0.4);
+}
+
+.parts-list-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 0;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 12px;
+  }
+  
+  .save-template-button, .save-draft-button, .add-row-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .save-template-button {
+   
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .save-template-button:hover {
+    
+    background-color: #43a047;
+  }
+  
+  .save-draft-button {
+    background-color: #f0f0f0;
+    color: #333;
+    
+  }
+  
+  .save-draft-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .add-row-button {
+    background-color: #1976d2;
+    color: white;
+    
+  }
+  
+  .add-row-button:hover {
+    background-color: #1565c0;
+ 
+  }
+  
+  .part-delete-icon {
+    font-size: 16px;    /* Very small size */
+    cursor: pointer;     /* Make it clickable */
+    transition: color 0.2s ease, transform 0.2s ease;
+    color: #888;         /* Default color (neutral) */
+  }
+  
+  .part-delete-icon:hover {
+    color: #e57373;      /* Faint red shade on hover */
+    transform: scale(1.1);  /* Slight scale-up for better feedback */
+  }
+  
+
+  
+@media (max-width: 768px) {
+    .parts-list-item {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .parts-fixed-header {
+        grid-template-columns: 40px 1fr 1fr;
+        padding: 10px;
+    }
+
+    .parts-list-number {
+        font-size: 12px;
+    }
+
+    .parts-list-name,
+    .parts-list-checkPoint {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .parts-list-save-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

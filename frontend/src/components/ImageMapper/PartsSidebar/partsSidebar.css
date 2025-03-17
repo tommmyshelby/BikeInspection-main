@@ -1,0 +1,133 @@
+@import "../mapper-globals.css";
+.partsSidebar {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
+    transition: width var(--animation-standard);
+    overflow: hidden;
+  }
+  
+  .imageMapper.fullscreen .partsSidebar {
+    width: 20%;
+  }
+  
+  .partsSidebar:not(.imageMapper.fullscreen .partsSidebar) {
+    width: 25%;
+  }
+  
+  .sidebarHeader {
+    padding: 0.75rem;
+    background-color: var(--sidebar-header-bg);
+    border-bottom: 1px solid var(--sidebar-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sidebarTitle {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .resetButton {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(255, 69, 58, 0.1);
+    color: #ff453a;
+    border-radius: var(--radius-sm);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    transition: background-color var(--animation-standard);
+  }
+  
+  .resetButton:hover {
+    background-color: rgba(255, 69, 58, 0.2);
+  }
+  
+  .partsGridHeader {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--sidebar-border);
+  }
+  
+  .partsList {
+    overflow-y: auto;
+    height: calc(100% - 4.25rem);
+  }
+  
+  .partItem {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--sidebar-border);
+    transition: background-color var(--animation-standard);
+  }
+  
+  .partItem:hover:not(.partItemCurrent, .partItemEditing) {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  .partItemCurrent {
+    background-color: rgba(0, 113, 227, 0.05);
+  }
+  
+  .partItemEditing {
+    background-color: rgba(255, 159, 10, 0.05);
+  }
+  
+  .partNumber {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .partName {
+    color: var(--text-primary);
+  }
+  
+  .partStatus {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .statusBadge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .statusBadgeUnmapped {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-tertiary);
+  }
+  
+  .statusBadgeEdit {
+    background-color: rgba(0, 113, 227, 0.1);
+    color: var(--status-blue);
+    cursor: pointer;
+    transition: background-color var(--animation-standard);
+  }
+  
+  .statusBadgeEdit:hover {
+    background-color: rgba(0, 113, 227, 0.2);
+  }
+  
+  .statusBadgeEditing {
+    background-color: rgba(255, 159, 10, 0.1);
+    color: var(--status-amber);
+    cursor: pointer;
+  }
+  
+  .statusBadgeEditing:hover {
+    background-color: rgba(255, 159, 10, 0.2);
+  }
+  

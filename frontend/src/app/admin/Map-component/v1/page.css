@@ -1,0 +1,221 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  background-color: rgb(0, 197, 197);
+  /* Prevent content from flowing outside */
+}
+.bike-mapper-grid {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1500px;
+  max-height: 90vh;
+  justify-content: space-between;
+}
+
+/* Notification bar */
+.mapping-notification-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #f0f8ff;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-action-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.image-area {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px; /* Fixed height for the image area */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the canvas vertically */
+  align-items: center; /* Center the canvas horizontally */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue; /* Temporary for debugging */
+  object-fit: contain;
+}
+
+.bike-image {
+
+  object-fit: contain;
+  cursor: crosshair;
+  border: 10px solid green; /* Temporary for debugging */
+  margin: 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  margin: 20px;
+  height: 100%;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Sidebar */
+.parts-list-sidebar {
+  flex-shrink: 0;
+  width: 300px; /* Fixed width */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Contain overflow */
+}
+
+/* Sticky Header */
+.list-header {
+  display: grid;
+  grid-template-columns: 50px auto;
+  font-weight: bold;
+  padding: 12px 16px;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Scrollable Parts List */
+.parts-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+/* Parts Row */
+.parts-row {
+  display: grid;
+  grid-template-columns: 50px auto;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+  align-items: center;
+}
+
+.parts-row:hover {
+  background-color: #f1f1f1;
+}
+
+/* Column Styles */
+.parts-number {
+  text-align: left;
+  font-weight: bold;
+}
+
+.parts-name {
+  text-align: left;
+}
+
+
+.marker {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+/* Upload Placeholder */
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.upload-placeholder:hover {
+  border-color: #4a90e2;
+}
+
+.upload-placeholder p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.upload-label {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.canvasContainer {
+  position: relative;
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  max-height: 100%; /* Ensure it doesn't exceed parent height */
+  background-color: #fff;
+  overflow: hidden; /* Prevent canvas overflow */
+}
+
+#canvas {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain; /* Ensure image fits within canvas */
+}

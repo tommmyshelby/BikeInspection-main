@@ -12,12 +12,20 @@
           <p>Manage bike inspections efficiently with our streamlined process.</p>
         </div>
 
+
+        
         {/* Action Cards */}
         <div className="card-container">
+       
+        <div className="home-card" onClick={() => router.push("/admin/parts-management")}>
+            <h2>Create New Parts-Mapping List </h2>
+            <p>Here you can create a new list of parts to be mapped and fetched while mapping</p>
+          </div>
+
           {/* Upload New Bike */}
-          <div className="home-card" onClick={() => router.push("/upload")}>
-            <h2>Upload New Bike</h2>
-            <p>Select and upload bike images for mapping.</p>
+          <div className="home-card" onClick={() => router.push("/image-list-creation")}>
+            <h2>Create Inspection Data</h2>
+            <p>In this page you create session for inspection for a Entity which can have multiple Image-View and corresponding PartsList</p>
           </div>
 
           {/* Inspection & Mapping List */}

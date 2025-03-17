@@ -1,5 +1,5 @@
 /*mapping area*/
-
+/*
 .bike-mapper-container {
   display: flex;
   flex-direction: column;
@@ -26,6 +26,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: crosshair;
+  
 }
 
 .bike-image {
@@ -36,33 +37,9 @@
   background-color: #22c55e;
 }
 
-.marker {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  margin-top: -12px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(245, 204, 4);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 2px solid #d1d5db;
-  transition: all 0.2s;
-  cursor: pointer;
-}
 
-.parts-list {
-  flex: 0 0 30%;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  max-height: 80vh;
-  overflow-y: auto;
-}
+
+
 
 .marker:hover {
   transform: scale(1.1);
@@ -86,8 +63,8 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 6px 10px;
-  background: rgba(20, 20, 20, 0.9); /* Dark, modern background */
-  color: #f8fafc; /* Soft white text */
+  background: rgba(20, 20, 20, 0.9); 
+  color: #f8fafc;
   font-size: 13px;
   font-weight: 500;
   border-radius: 6px;
@@ -216,3 +193,4 @@
   color: #4b5563;
   margin-bottom: 24px;
 }
+*/

@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(0, 197, 197);
+}
+
+.bike-mapper-grid {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #0066cc;
+  height: 90vh;
+  width: 100%;
+}
+
+.parts-list-sidebar {
+  flex-shrink: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Contain overflow */
+}
+
+.image-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #666;
+}
+
+
+/* Notification bar */
+.mapping-notification-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background-color: #f0f8ff;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-action-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.image-container{
+  position: relative;
+  background-color: #1fe143;
+  overflow: hidden; /* Prevents image from overflowing */
+  
+}
+
+
+.mapped-image {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  cursor: crosshair; /* Only the image is clickable */
+}
+.mapped-image img {
+ box-shadow: #666;
+}
+
+
+
+
+
+
+/* Sticky Header */
+.list-header {
+  display: grid;
+  grid-template-columns: 50px auto;
+  font-weight: bold;
+  padding: 12px 16px;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Scrollable Parts List */
+.parts-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+/* Parts Row */
+.parts-row {
+  display: grid;
+  grid-template-columns: 50px auto;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+  align-items: center;
+}
+
+.parts-row:hover {
+  background-color: #f1f1f1;
+}
+
+/* Column Styles */
+.parts-number {
+  text-align: left;
+  font-weight: bold;
+}
+
+.parts-name {
+  text-align: left;
+}
+
+/* Image Area */
+
+.marker {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transform: translate(-50%, -50%); /* Centers marker on the exact point */
+  pointer-events: auto; /* Makes markers clickable */
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* Upload Placeholder */
+.upload-placeholder {
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-icon {
+  font-size: 48px;
+}

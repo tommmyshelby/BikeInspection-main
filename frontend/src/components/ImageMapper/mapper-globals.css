@@ -1,0 +1,43 @@
+.imageMapper {
+    --mapper-bg: #ffffff;
+    --header-bg-start: #1d1d1f;
+    --header-bg-end: #2b2b2b;
+    --header-text: #ffffff;
+    --sidebar-bg: #f5f5f7;
+    --sidebar-border: #e5e5e7;
+    --sidebar-header-bg: #f0f0f2;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #86868b;
+    --button-primary-bg: #0071e3;
+    --button-primary-hover: #0077ed;
+    --button-primary-text: #ffffff;
+    --mapper-area-bg: #f0f0f2;
+    --image-bg: #0c0c0c;
+    --marker-bg: #ff453a;
+    --marker-editing-bg: #ff9f0a;
+    --animation-standard: 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+    --animation-bounce: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --status-blue: #0071e3;
+    --status-amber: #ff9f0a;
+    --status-green: #28cd41;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--mapper-bg);
+    transition: all var(--animation-standard);
+    height: calc(100vh - 2rem);
+    max-width: 1280px;
+    margin: 1rem auto;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }

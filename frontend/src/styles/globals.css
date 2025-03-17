@@ -5,64 +5,48 @@
 @import "./inspection-list.css";
 @import "./inspection.css";
 @import "./inspection-preview.css";
-
-
-
-
-
+@import "./parts-list.css";
+@import "./create-parts-list.css";
+@import "./draft.css";
 /* CSS Variables for consistent theming */
 :root {
-    /* Colors */
-    --primary-blue: #3a8dde;
-    --secondary-blue: #1e6cb7;
-    --hover-blue: #4b9ef2;
-    --dark-blue: #0056b3;
-    --white: #ffffff;
-    --background-gray: #f4f4f4;
-    --nav-dark: #333;
-    --text-dark: #333;
-    
-    /* Gradients */
-    --blue-gradient: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-    --hover-gradient: linear-gradient(135deg, var(--hover-blue), var(--secondary-blue));
-    --image-preview-gradient: linear-gradient(135deg, #d7ebff, #b0d3f8);
-    
-    /* Shadows */
-    --card-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    --hover-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    --button-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    --button-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    
-    /* Transitions */
-    --standard-transition: 0.3s ease;
-  }
-  
-  /* Global Styles */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-gray);
-  }
-  
-  
+  /* Colors */
+  --primary-blue: #3a8dde;
+  --secondary-blue: #1e6cb7;
+  --hover-blue: #4b9ef2;
+  --dark-blue: #0056b3;
+  --white: #ffffff;
+  --background-gray: #f4f4f4;
+  --nav-dark: #333;
+  --text-dark: #333;
 
+  /* Gradients */
+  --blue-gradient: linear-gradient(
+    135deg,
+    var(--primary-blue),
+    var(--secondary-blue)
+  );
+  --hover-gradient: linear-gradient(
+    135deg,
+    var(--hover-blue),
+    var(--secondary-blue)
+  );
+  --image-preview-gradient: linear-gradient(135deg, #d7ebff, #b0d3f8);
 
+  /* Shadows */
+  --card-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  --hover-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  --button-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --button-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 
+  /* Transitions */
+  --standard-transition: 0.3s ease;
+}
 
-
-
-
-  
-  
-
-  
-
- 
-
-
-
-
-
-
-
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-gray);
+}

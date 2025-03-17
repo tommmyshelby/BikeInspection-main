@@ -1,0 +1,112 @@
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .panel {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+  
+    
+    
+  }
+  
+  /* Scoped h2 selector */
+  .panel h2 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .canvasContainer {
+    margin-top: 10px;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn:hover {
+    background-color: #3a80d2;
+  }
+  
+  .btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .resizeControls {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Scoped input[type="file"] selector */
+  .panel input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .markerData {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-top: 20px;
+    font-family: monospace;
+  }
+  
+  .instructions {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Scoped ol selector */
+  .instructions ol {
+    padding-left: 20px;
+  }
+  
+  .markerItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .markerItem button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+  }

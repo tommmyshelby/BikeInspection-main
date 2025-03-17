@@ -1,0 +1,142 @@
+@import "../mapper-globals.css";
+
+.mapperArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mapper-area-bg);
+    overflow: hidden;
+    position: relative;
+    transition: padding var(--animation-standard);
+  }
+  
+  .imageMapper.fullscreen .mapperArea {
+    padding: 1rem;
+  }
+  
+  .mapperArea:not(.imageMapper.fullscreen .mapperArea) {
+    padding: 0.5rem;
+  }
+  
+  .statusBar {
+    background-color: var(--mapper-bg);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .statusIndicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .statusDot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: var(--radius-full);
+    background-color: var(--status-blue);
+  }
+  
+  .statusDotMapping {
+    background-color: var(--status-amber);
+    animation: pulse 1.5s infinite;
+  }
+  
+  .statusDotComplete {
+    background-color: var(--status-green);
+  }
+  
+  .statusText {
+    color: var(--text-primary);
+  }
+  
+  .statusPartName {
+    font-weight: 500;
+  }
+  
+  .startMappingButton {
+    padding: 0.5rem 0.75rem;
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    border-radius: var(--radius-md);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color var(--animation-standard);
+  }
+  
+  .startMappingButton:hover {
+    background-color: var(--button-primary-hover);
+  }
+  
+  .canvasContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+  }
+  
+  .canvas {
+    display: block;
+    margin: 0;
+    padding: 0;
+    cursor: crosshair;
+  }
+  
+  .uploadContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--header-text);
+  }
+  
+  .uploadIcon {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .uploadTitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .uploadText {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .uploadButton {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    transition: background-color var(--animation-standard), transform var(--animation-standard);
+  }
+  
+  .uploadButton:hover {
+    background-color: var(--button-primary-hover);
+    transform: translateY(-2px);
+  }
+  
+  .hidden {
+    display: none;
+  }

@@ -87,7 +87,7 @@ const InspectionPage = () => {
               </div>
             )}
           </div>
-          <button className="start-inspection" onClick={handleStartInspection}>
+          <button className="upload-label" onClick={handleStartInspection}>
             Start Inspection
           </button>
         </div>

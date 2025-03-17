@@ -1,0 +1,59 @@
+drafts-page {
+    padding: 20px;
+    background: #f9f9f9;
+    min-height: 100vh;
+  }
+  .drafts-header {
+    margin-bottom: 20px;
+  }
+  .drafts-header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .drafts-header p {
+    font-size: 14px;
+    color: #666;
+  }
+  .drafts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .draft-card {
+    background: white;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .draft-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  .draft-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  .open-draft-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  .open-draft-btn:hover {
+    background-color: #0056b3;
+  }
+  .no-drafts {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 50px;
+  }

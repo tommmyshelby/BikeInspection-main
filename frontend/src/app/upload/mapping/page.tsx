@@ -13,7 +13,7 @@ interface PartMarker {
 
 interface ExportData {
   markers: PartMarker[];
-  imageUrl: string;
+  imageUrl: string;                                                           
   imageWidth: string;
   imageHeight: number;
 }
@@ -158,31 +158,7 @@ export default function BikePartMapper() {
       </div>
 
       <div className="bike-mapper-grid">
-        <div className="image-area" onClick={handleImageClick}>
-          <img
-            src={uploadedImage}
-            alt="Uploaded Image"
-            className="bike-image"
-            onLoad={handleImageLoad}
-          />
-          {markers.map((marker) => (
-            <button
-              key={marker.id}
-              className={`marker ${
-                selectedMarkerId === marker.id ? "selected" : ""
-              }`}
-              style={{ left: `${marker.x}%`, top: `${marker.y}%` }}
-              onClick={(e) => handleMarkerClick(e, marker.id)}
-            >
-              <span className="marker-label">{marker.id}</span>
-              <div className="marker-tooltip">
-                {marker.name} <br /> {marker.value}
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <div className="parts-list">
+      <div className="parts-list">
           {markers.length === 0 ? (
             <p className="parts-list-empty">
               No parts marked yet. Click on the Bike parts to add markers and
@@ -242,6 +218,31 @@ export default function BikePartMapper() {
             </>
           )}
         </div>
+        <div className="image-area" onClick={handleImageClick}>
+          <img
+            src={uploadedImage}
+            alt="Uploaded Image"
+            className="bike-image"
+            onLoad={handleImageLoad}
+          />
+          {markers.map((marker) => (
+            <button
+              key={marker.id}
+              className={`marker ${
+                selectedMarkerId === marker.id ? "selected" : ""
+              }`}
+              style={{ left: `${marker.x}%`, top: `${marker.y}%` }}
+              onClick={(e) => handleMarkerClick(e, marker.id)}
+            >
+              <span className="marker-label">{marker.id}</span>
+              <div className="marker-tooltip">
+                {marker.name} <br /> {marker.value}
+              </div>
+            </button>
+          ))}
+        </div>
+
+       
       </div>
     </div>
   );
